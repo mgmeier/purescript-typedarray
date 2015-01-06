@@ -1,0 +1,27 @@
+{
+  "name": "purescript-webgl",
+  "homepage": "https://github.com/jutaro/purescript-typedarray",
+  "version": "0.0.1",
+  "authors": [
+    "Jürgen Nicklisch-Franken <jnf@arcor.de>"
+  ],
+  "description": "Binding to  of Javascript's TypedArrays",
+  "keywords": [
+    "purescript"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "tests",
+    "tmp",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-maybe" : "*"
+  }
+}

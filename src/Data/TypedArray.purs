@@ -104,12 +104,12 @@ foreign import asArray
     :: forall a. ArrayBuffer a -> [Number]
 
 foreign import length
-  """function arrayBufferLength(arrayBuffer)
+  """function length(arrayBuffer)
     {return arrayBuffer.length;};"""
     :: forall a. ArrayBuffer a -> Number
 
 foreign import byteLength
-  """function arrayBufferByteLength(arrayBuffer)
+  """function byteLength(arrayBuffer)
     {return arrayBuffer.byteLength;};"""
     :: forall a. ArrayBuffer a -> Number
 

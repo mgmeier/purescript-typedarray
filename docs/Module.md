@@ -2,75 +2,240 @@
 
 ## Module Data.TypedArray
 
-### Types
+#### `asInt8Array`
 
-    data ArrayBuffer :: * -> *
+``` purescript
+asInt8Array :: [Number] -> ArrayBuffer Int8
+```
 
-    data Float32
+#### `asUint8Array`
 
-    type Float32Array = ArrayBuffer Float32
-
-    data Float64
-
-    type Float64Array = ArrayBuffer Float64
-
-    data Int16
-
-    type Int16Array = ArrayBuffer Int16
-
-    data Int32
-
-    type Int32Array = ArrayBuffer Int32
-
-    data Int8
-
-    type Int8Array = ArrayBuffer Int8
-
-    data Uint16
-
-    type Uint16Array = ArrayBuffer Uint16
-
-    data Uint32
-
-    type Uint32Array = ArrayBuffer Uint32
-
-    data Uint8
-
-    type Uint8Array = ArrayBuffer Uint8
-
-    data Uint8Clamped
-
-    type Uint8ClampedArray = ArrayBuffer Uint8Clamped
+``` purescript
+asUint8Array :: [Number] -> ArrayBuffer Uint8
+```
 
 
-### Values
+#### `asUint8ClampedArray`
 
-    (!!) :: forall a. ArrayBuffer a -> Number -> Maybe Number
+``` purescript
+asUint8ClampedArray :: [Number] -> ArrayBuffer Uint8ClampedArray
+```
 
-    asArray :: forall a. ArrayBuffer a -> [Number]
 
-    asFloat32Array :: [Number] -> ArrayBuffer Float32
+#### `asInt16Array`
 
-    asFloat64Array :: [Number] -> ArrayBuffer Float64
+``` purescript
+asInt16Array :: [Number] -> ArrayBuffer Int16
+```
 
-    asInt16Array :: [Number] -> ArrayBuffer Int16
 
-    asInt32Array :: [Number] -> ArrayBuffer Int32
+#### `asUint16Array`
 
-    asInt8Array :: [Number] -> ArrayBuffer Int8
+``` purescript
+asUint16Array :: [Number] -> ArrayBuffer Uint16
+```
 
-    asUint16Array :: [Number] -> ArrayBuffer Uint16
 
-    asUint32Array :: [Number] -> ArrayBuffer Uint32
+#### `asInt32Array`
 
-    asUint8Array :: [Number] -> ArrayBuffer Uint8
+``` purescript
+asInt32Array :: [Number] -> ArrayBuffer Int32
+```
 
-    asUint8ClampedArray :: [Number] -> ArrayBuffer Uint8ClampedArray
 
-    byteLength :: forall a. ArrayBuffer a -> Number
+#### `asUint32Array`
 
-    insertAt :: forall a. Number -> a -> ArrayBuffer a -> ArrayBuffer a
+``` purescript
+asUint32Array :: [Number] -> ArrayBuffer Uint32
+```
 
-    length :: forall a. ArrayBuffer a -> Number
 
-    unsafeIndex :: forall a. ArrayBuffer a -> Number -> Number
+#### `asFloat32Array`
+
+``` purescript
+asFloat32Array :: [Number] -> ArrayBuffer Float32
+```
+
+
+#### `asFloat64Array`
+
+``` purescript
+asFloat64Array :: [Number] -> ArrayBuffer Float64
+```
+
+
+#### `asArray`
+
+``` purescript
+asArray :: forall a. ArrayBuffer a -> [Number]
+```
+
+
+#### `length`
+
+``` purescript
+length :: forall a. ArrayBuffer a -> Number
+```
+
+
+#### `byteLength`
+
+``` purescript
+byteLength :: forall a. ArrayBuffer a -> Number
+```
+
+
+#### `insertAt`
+
+``` purescript
+insertAt :: forall a. Number -> a -> ArrayBuffer a -> ArrayBuffer a
+```
+
+
+#### `(!!)`
+
+``` purescript
+(!!) :: forall a. ArrayBuffer a -> Number -> Maybe Number
+```
+
+
+#### `unsafeIndex`
+
+``` purescript
+unsafeIndex :: forall a. ArrayBuffer a -> Number -> Number
+```
+
+
+
+## Module Data.TypedArray.Types
+
+#### `ArrayBuffer`
+
+``` purescript
+data ArrayBuffer :: * -> *
+```
+
+a representation of TypedArrays with a phantom type
+
+#### `Int8`
+
+``` purescript
+data Int8
+```
+
+#### `Uint8`
+
+``` purescript
+data Uint8
+```
+
+
+#### `Uint8Clamped`
+
+``` purescript
+data Uint8Clamped
+```
+
+
+#### `Int16`
+
+``` purescript
+data Int16
+```
+
+
+#### `Uint16`
+
+``` purescript
+data Uint16
+```
+
+
+#### `Int32`
+
+``` purescript
+data Int32
+```
+
+
+#### `Uint32`
+
+``` purescript
+data Uint32
+```
+
+
+#### `Float32`
+
+``` purescript
+data Float32
+```
+
+
+#### `Float64`
+
+``` purescript
+data Float64
+```
+
+
+#### `Int8Array`
+
+``` purescript
+type Int8Array = ArrayBuffer Int8
+```
+
+#### `Uint8Array`
+
+``` purescript
+type Uint8Array = ArrayBuffer Uint8
+```
+
+
+#### `Uint8ClampedArray`
+
+``` purescript
+type Uint8ClampedArray = ArrayBuffer Uint8Clamped
+```
+
+
+#### `Int16Array`
+
+``` purescript
+type Int16Array = ArrayBuffer Int16
+```
+
+
+#### `Uint16Array`
+
+``` purescript
+type Uint16Array = ArrayBuffer Uint16
+```
+
+
+#### `Int32Array`
+
+``` purescript
+type Int32Array = ArrayBuffer Int32
+```
+
+
+#### `Uint32Array`
+
+``` purescript
+type Uint32Array = ArrayBuffer Uint32
+```
+
+
+#### `Float32Array`
+
+``` purescript
+type Float32Array = ArrayBuffer Float32
+```
+
+
+#### `Float64Array`
+
+``` purescript
+type Float64Array = ArrayBuffer Float64
+```

@@ -1,7 +1,6 @@
 {
   "name": "purescript-typedarray",
   "homepage": "https://github.com/jutaro/purescript-typedarray",
-  "version": "0.1.0",
   "authors": [
     "Jürgen Nicklisch-Franken <jnf@arcor.de>"
   ],

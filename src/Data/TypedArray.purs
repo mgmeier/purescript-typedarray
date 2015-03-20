@@ -15,7 +15,7 @@
 
 module Data.TypedArray where
 
-import Data.TypedArray.Types
+import Data.ArrayBuffer.Types
 
 import Data.Maybe
 
@@ -24,71 +24,71 @@ foreign import asInt8Array
   """function asInt8Array(array)
     {var res = new Int8Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Int8
+    :: [Number] -> Int8Array
 
 foreign import asUint8Array
   """function asUint8Array(array)
     {var res = new Uint8Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Uint8
+    :: [Number] -> Uint8Array
 
 foreign import asUint8ClampedArray
   """function asUint8ClampedArray(array)
     {var res = new Uint8ClampedArray (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Uint8ClampedArray
+    :: [Number] -> Uint8ClampedArray
 
 foreign import asInt16Array
   """function asInt16Array(array)
     {var res = new Int16Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Int16
+    :: [Number] -> Int16Array
 
 foreign import asUint16Array
   """function asUint16Array(array)
     {var res = new Uint16Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Uint16
+    :: [Number] -> Uint16Array
 
 foreign import asInt32Array
   """function asInt32Array(array)
     {var res = new Int32Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Int32
+    :: [Number] -> Int32Array
 
 foreign import asUint32Array
   """function asUint32Array(array)
     {var res = new Uint32Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Uint32
+    :: [Number] -> Uint32Array
 
 foreign import asFloat32Array
   """function asFloat32Array(array)
     {var res = new Float32Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Float32
+    :: [Number] -> Float32Array
 
 foreign import asFloat64Array
   """function asFloat64Array(array)
     {var res = new Float64Array (array);
      return res;};"""
-    :: [Number] -> ArrayBuffer Float64
+    :: [Number] -> Float64Array
 
 foreign import asArray
   """function asArray(arrayBuffer)
     {var res = Array.prototype.slice.call(arrayBuffer);;
      return res;};"""
-    :: forall a. ArrayBuffer a -> [Number]
+    :: forall a. ArrayView a -> [Number]
 
 foreign import length
   """function length(arrayBuffer)
     {return arrayBuffer.length;};"""
-    :: forall a. ArrayBuffer a -> Number
+    :: forall a. ArrayView a -> Number
 
 foreign import byteLength
   """function byteLength(arrayBuffer)
     {return arrayBuffer.byteLength;};"""
-    :: forall a. ArrayBuffer a -> Number
+    :: forall a. ArrayView a -> Number
 
 infixl 8 !!
 
@@ -101,9 +101,9 @@ foreign import insertAt
   \      return l1;\
   \    }; \
   \  };\
-  \}":: forall a. Number -> a -> ArrayBuffer a -> ArrayBuffer a
+  \}":: forall a. Number -> a -> ArrayView a -> ArrayView a
 
-(!!) :: forall a. ArrayBuffer a -> Number -> Maybe Number
+(!!) :: forall a. ArrayView a -> Number -> Maybe Number
 (!!) xs n =
   if n < 0 || n >= (length xs) || isInt n
     then Nothing
@@ -116,4 +116,4 @@ foreign import unsafeIndex
   \  return function(n) {\
   \    return xs[n];\
   \  };\
-  \}" :: forall a. ArrayBuffer a -> Number -> Number
+  \}" :: forall a. ArrayView a -> Number -> Number

@@ -2,7 +2,7 @@
 
 // module Data.TypedArray
 
-(function () {
+
     "use strict";
 
     // conversion from and to typed arrays
@@ -67,4 +67,3 @@
           return xs[n];
         };
     };
-})();

@@ -38,7 +38,7 @@ foreign import asFloat32Array :: Array Number -> Float32Array
 
 foreign import asFloat64Array :: Array Number -> Float64Array
 
-foreign import asArray :: forall a num. (ModuloSemiring num) => ArrayView a -> Array num
+foreign import asArray :: forall num1 num2. ArrayView num1 -> Array num2
 
 foreign import length :: forall a. ArrayView a -> Int
 

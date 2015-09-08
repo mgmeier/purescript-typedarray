@@ -2,12 +2,16 @@
   "name": "purescript-typedarray",
   "homepage": "https://github.com/jutaro/purescript-typedarray",
   "authors": [
-    "Jürgen Nicklisch-Franken <jnf@arcor.de>"
+    "Juergen Nicklisch-Franken <jnf@arcor.de>"
   ],
   "description": "Binding to  of Javascript's TypedArrays",
   "keywords": [
     "purescript"
   ],
+   "repository": {
+      "type": "git",
+      "url": "git://github.com/jutaro/purescript-typedarray.git"
+  },
   "license": "Apache-2.0",
   "ignore": [
     "**/.*",
@@ -21,7 +25,7 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-prelude" : "*",      
+    "purescript-prelude" : "*",
     "purescript-maybe" : "*",
     "purescript-arraybuffer-types" : "*"
   }

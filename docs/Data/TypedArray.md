@@ -3,43 +3,43 @@
 #### `asInt8Array`
 
 ``` purescript
-asInt8Array :: Array Number -> Int8Array
+asInt8Array :: Array Int -> Int8Array
 ```
 
 #### `asUint8Array`
 
 ``` purescript
-asUint8Array :: Array Number -> Uint8Array
+asUint8Array :: Array Int -> Uint8Array
 ```
 
 #### `asUint8ClampedArray`
 
 ``` purescript
-asUint8ClampedArray :: Array Number -> Uint8ClampedArray
+asUint8ClampedArray :: Array Int -> Uint8ClampedArray
 ```
 
 #### `asInt16Array`
 
 ``` purescript
-asInt16Array :: Array Number -> Int16Array
+asInt16Array :: Array Int -> Int16Array
 ```
 
 #### `asUint16Array`
 
 ``` purescript
-asUint16Array :: Array Number -> Uint16Array
+asUint16Array :: Array Int -> Uint16Array
 ```
 
 #### `asInt32Array`
 
 ``` purescript
-asInt32Array :: Array Number -> Int32Array
+asInt32Array :: Array Int -> Int32Array
 ```
 
 #### `asUint32Array`
 
 ``` purescript
-asUint32Array :: Array Number -> Uint32Array
+asUint32Array :: Array Int -> Uint32Array
 ```
 
 #### `asFloat32Array`
@@ -57,7 +57,7 @@ asFloat64Array :: Array Number -> Float64Array
 #### `asArray`
 
 ``` purescript
-asArray :: forall a. ArrayView a -> Array Number
+asArray :: forall num1 num2. ArrayView num1 -> Array num2
 ```
 
 #### `length`
@@ -75,7 +75,7 @@ byteLength :: forall a. ArrayView a -> Number
 #### `insertAt`
 
 ``` purescript
-insertAt :: forall a. Number -> a -> ArrayView a -> ArrayView a
+insertAt :: forall a. Number -> Int -> ArrayView a -> ArrayView a
 ```
 
 #### `(!!)`

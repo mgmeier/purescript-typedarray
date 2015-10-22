@@ -23,10 +23,10 @@ exports.byteLength = function(v) {
   return v.byteLength;
 }
 
-exports.getFloat32Unsafe = function(v,o) {
-    return v.getFloat32(o);
+exports.getFloat32Unsafe = function(v,o,ile) {
+    return v.getFloat32(o,ile);
 }
 
-exports.getUInt16Unsafe = function(v,o) {
-    return v.getUInt16(o);
+exports.getUInt16Unsafe = function(v,o,ile) {
+    return v.getUInt16(o,ile);
 }

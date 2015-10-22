@@ -39,16 +39,16 @@ foreign import byteOffset :: DataView -> ByteOffset
 -- | Represents the length of this view.
 foreign import byteLength :: DataView -> ByteLength
 
-getFloat32 :: DataView -> ByteOffset -> Maybe Number
-getFloat32 v o |  (o + 1) <= byteLength v = Nothing
-               | otherwise                = Just $ runFn2 getFloat32Unsafe v o
+getFloat32 :: DataView -> ByteOffset -> Boolean -> Maybe Number
+getFloat32 v o ile |  (o + 1) <= byteLength v = Nothing
+                   | otherwise                = Just $ runFn3 getFloat32Unsafe v o ile
 
-getUInt16 :: DataView -> ByteOffset -> Maybe Number
-getUInt16 v o |  (o + 1) <= byteLength v = Nothing
-               | otherwise              = Just $ runFn2 getUInt16Unsafe v o
-
--- | Fetch float32 value at a certain index in a `DataView`.
-foreign import getFloat32Unsafe :: Fn2 DataView ByteOffset Number
+getUInt16 :: DataView -> ByteOffset -> Boolean -> Maybe Number
+getUInt16 v o ile |  (o + 1) <= byteLength v = Nothing
+                  | otherwise              = Just $ runFn3 getUInt16Unsafe v o ile
 
 -- | Fetch float32 value at a certain index in a `DataView`.
-foreign import getUInt16Unsafe :: Fn2 DataView ByteOffset Number
+foreign import getFloat32Unsafe :: Fn3 DataView ByteOffset Boolean Number
+
+-- | Fetch float32 value at a certain index in a `DataView`.
+foreign import getUInt16Unsafe :: Fn3 DataView ByteOffset Boolean Number

@@ -24,10 +24,10 @@ import Data.ArrayBuffer.Types
 foreign import asDataView :: ArrayBuffer -> DataView
 
 -- | View mapping a region of the `ArrayBuffer`.
-slice :: forall e. ByteOffset -> ByteLength -> ArrayBuffer -> Maybe DataView
+slice :: ByteOffset -> ByteLength -> ArrayBuffer -> Maybe DataView
 slice = runFn5 sliceImpl Just Nothing
 
-foreign import sliceImpl :: forall e. Fn5 (DataView -> Maybe DataView) (Maybe DataView)
+foreign import sliceImpl :: Fn5 (DataView -> Maybe DataView) (Maybe DataView)
                                             ByteOffset ByteLength ArrayBuffer (Maybe DataView)
 
 -- | `ArrayBuffer` being mapped by the view.

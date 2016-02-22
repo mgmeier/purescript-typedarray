@@ -14,13 +14,11 @@
 -----------------------------------------------------------------------------
 module Data.DataView where
 
-import Prelude
-import Data.Function
-import Data.Maybe
-import Data.ArrayBuffer.Types
+import Prelude (($), otherwise, (+), (<=))
+import Data.Function (Fn3, Fn5, runFn3, runFn5)
+import Data.Maybe (Maybe(Just, Nothing))
+import Data.ArrayBuffer.Types (ByteOffset, DataView, ByteLength, ArrayBuffer)
 
-
--- | DataView on the whole `ArrayBuffer`.
 foreign import asDataView :: ArrayBuffer -> DataView
 
 -- | View mapping a region of the `ArrayBuffer`.

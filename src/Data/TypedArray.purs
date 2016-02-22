@@ -15,11 +15,11 @@
 
 module Data.TypedArray where
 
-import Data.ArrayBuffer.Types
-import Data.Maybe
-import Prelude
+import Data.ArrayBuffer.Types (ArrayView, Float64Array, Float32Array, Uint32Array, Int32Array, Uint16Array,
+                                Int16Array, Uint8ClampedArray, Uint8Array, Int8Array)
+import Data.Maybe (Maybe(Just, Nothing))
+import Prelude ((>=), (||), (<))
 
--- * conversion from and to typed arrays
 foreign import asInt8Array :: Array Int -> Int8Array
 
 foreign import asUint8Array :: Array Int -> Uint8Array
@@ -44,12 +44,12 @@ foreign import length :: forall a. ArrayView a -> Int
 
 foreign import byteLength :: forall a. ArrayView a -> Number
 
-infixl 8 !!
+infixl 8 index as !!
 
 foreign import insertAt :: forall a. Number -> Int -> ArrayView a -> ArrayView a
 
-(!!) :: forall a. ArrayView a -> Int -> Maybe Number
-(!!) xs n =
+index :: forall a. ArrayView a -> Int -> Maybe Number
+index xs n =
   if n < 0 || n >= (length xs)
     then Nothing
     else Just (xs `unsafeIndex` n)

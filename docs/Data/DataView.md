@@ -1,12 +1,13 @@
 ## Module Data.DataView
 
+Binding to DataView of Javascript (which are only useful for FFI interfaces)
+It makes sense to import this module qualified.
+
 #### `asDataView`
 
 ``` purescript
 asDataView :: ArrayBuffer -> DataView
 ```
-
-DataView on the whole `ArrayBuffer`.
 
 #### `slice`
 

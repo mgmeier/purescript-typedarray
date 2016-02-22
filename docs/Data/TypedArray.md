@@ -1,5 +1,8 @@
 ## Module Data.TypedArray
 
+Binding to Typed Arrays of Javascript (which are only useful for FFI interfaces)
+It makes sense to import this module qualified.
+
 #### `asInt8Array`
 
 ``` purescript
@@ -72,19 +75,25 @@ length :: forall a. ArrayView a -> Int
 byteLength :: forall a. ArrayView a -> Number
 ```
 
+#### `(!!)`
+
+``` purescript
+infixl 8 index as !!
+```
+
+_left-associative / precedence 8_
+
 #### `insertAt`
 
 ``` purescript
 insertAt :: forall a. Number -> Int -> ArrayView a -> ArrayView a
 ```
 
-#### `(!!)`
+#### `index`
 
 ``` purescript
-(!!) :: forall a. ArrayView a -> Int -> Maybe Number
+index :: forall a. ArrayView a -> Int -> Maybe Number
 ```
-
-_left-associative / precedence 8_
 
 #### `unsafeIndex`
 

@@ -38,6 +38,26 @@ foreign import asFloat32Array :: Array Number -> Float32Array
 
 foreign import asFloat64Array :: Array Number -> Float64Array
 
+
+foreign import newInt8Array :: Int -> Int8Array
+
+foreign import newUint8Array :: Int -> Uint8Array
+
+foreign import newUint8ClampedArray :: Int -> Uint8ClampedArray
+
+foreign import newInt16Array :: Int -> Int16Array
+
+foreign import newUint16Array :: Int -> Uint16Array
+
+foreign import newInt32Array :: Int -> Int32Array
+
+foreign import newUint32Array :: Int -> Uint32Array
+
+foreign import newFloat32Array :: Int -> Float32Array
+
+foreign import newFloat64Array :: Int -> Float64Array
+
+
 foreign import asArray :: forall num1 num2. ArrayView num1 -> Array num2
 
 foreign import length :: forall a. ArrayView a -> Int

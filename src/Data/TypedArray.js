@@ -42,6 +42,46 @@
         {var res = new Float64Array (array);
          return res;};
 
+//----------------
+
+    exports.newInt8Array = function(length)
+        {var res = new Int8Array(length);
+         return res;};
+
+    exports.newUint8Array = function (length)
+        {var res = new Uint8Array(length);
+         return res;};
+
+    exports.newUint8ClampedArray = function (length)
+        {var res = new Uint8ClampedArray(length);
+         return res;};
+
+    exports.newInt16Array = function (length)
+        {var res = new Int16Array (length);
+         return res;};
+
+    exports.newUint16Array = function (length)
+        {var res = new Uint16Array (length);
+         return res;};
+
+    exports.newInt32Array = function (length)
+        {var res = new Int32Array (length);
+         return res;};
+
+    exports.newUint32Array = function (length)
+        {var res = new Uint32Array (length);
+         return res;};
+
+    exports.newFloat32Array = function (length)
+        {var res = new Float32Array (length);
+         return res;};
+
+    exports.newFloat64Array = function (length)
+        {var res = new Float64Array (length);
+         return res;};
+
+//----------------------------
+
     exports.asArray = function (arrayBuffer)
         {var res = Array.prototype.slice.call(arrayBuffer);
          return res;};

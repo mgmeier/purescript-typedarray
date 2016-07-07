@@ -57,6 +57,60 @@ asFloat32Array :: Array Number -> Float32Array
 asFloat64Array :: Array Number -> Float64Array
 ```
 
+#### `newInt8Array`
+
+``` purescript
+newInt8Array :: Int -> Int8Array
+```
+
+#### `newUint8Array`
+
+``` purescript
+newUint8Array :: Int -> Uint8Array
+```
+
+#### `newUint8ClampedArray`
+
+``` purescript
+newUint8ClampedArray :: Int -> Uint8ClampedArray
+```
+
+#### `newInt16Array`
+
+``` purescript
+newInt16Array :: Int -> Int16Array
+```
+
+#### `newUint16Array`
+
+``` purescript
+newUint16Array :: Int -> Uint16Array
+```
+
+#### `newInt32Array`
+
+``` purescript
+newInt32Array :: Int -> Int32Array
+```
+
+#### `newUint32Array`
+
+``` purescript
+newUint32Array :: Int -> Uint32Array
+```
+
+#### `newFloat32Array`
+
+``` purescript
+newFloat32Array :: Int -> Float32Array
+```
+
+#### `newFloat64Array`
+
+``` purescript
+newFloat64Array :: Int -> Float64Array
+```
+
 #### `asArray`
 
 ``` purescript
@@ -80,8 +134,6 @@ byteLength :: forall a. ArrayView a -> Number
 ``` purescript
 infixl 8 index as !!
 ```
-
-_left-associative / precedence 8_
 
 #### `insertAt`
 

@@ -15,10 +15,10 @@
 
 module Data.TypedArray where
 
+import Prelude
+import Data.Maybe (Maybe(..))
 import Data.ArrayBuffer.Types (ArrayView, Float64Array, Float32Array, Uint32Array, Int32Array, Uint16Array,
                                 Int16Array, Uint8ClampedArray, Uint8Array, Int8Array)
-import Data.Maybe (Maybe(Just, Nothing))
-import Prelude ((>=), (||), (<))
 
 foreign import asInt8Array :: Array Int -> Int8Array
 

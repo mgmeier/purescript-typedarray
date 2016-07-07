@@ -14,9 +14,9 @@
 -----------------------------------------------------------------------------
 module Data.DataView where
 
-import Prelude (($), otherwise, (+), (<=))
-import Data.Function (Fn3, Fn5, runFn3, runFn5)
-import Data.Maybe (Maybe(Just, Nothing))
+import Prelude
+import Data.Maybe (Maybe(..))
+import Data.Function.Uncurried (Fn3, Fn5, runFn3, runFn5)
 import Data.ArrayBuffer.Types (ByteOffset, DataView, ByteLength, ArrayBuffer)
 
 foreign import asDataView :: ArrayBuffer -> DataView

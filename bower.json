@@ -8,9 +8,9 @@
   "keywords": [
     "purescript"
   ],
-   "repository": {
-      "type": "git",
-      "url": "git://github.com/jutaro/purescript-typedarray.git"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jutaro/purescript-typedarray.git"
   },
   "license": "Apache-2.0",
   "ignore": [
@@ -25,9 +25,9 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-prelude": "^0.1.5",
-    "purescript-maybe": "^0.3.5",
+    "purescript-prelude": "^1.0.1",
+    "purescript-maybe": "^1.0.0",
     "purescript-arraybuffer-types": "^0.2.0",
-    "purescript-functions": "^0.1.0"
+    "purescript-functions": "^1.0.0"
   }
 }

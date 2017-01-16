@@ -26,7 +26,7 @@
   ],
   "dependencies": {
     "purescript-prelude": "^2.1.0",
-    "purescript-maybe": "^2.0.0",
+    "purescript-maybe": "^2.0.1",
     "purescript-arraybuffer-types": "^0.2.0",
     "purescript-functions": "^2.0.0"
   },

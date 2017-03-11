@@ -82,6 +82,44 @@
 
 //----------------------------
 
+
+    exports.dwAsInt8Array = function(v) {
+      return new Int8Array(v.buffer, v.byteOffset, v.byteLength);
+    }
+
+    exports.dwAsInt16Array = function(v) {
+      return new Int16Array(v.buffer, v.byteOffset, v.byteLength >>> 1);
+    }
+
+    exports.dwAsInt32Array = function(v) {
+      return new Int32Array(v.buffer, v.byteOffset, v.byteLength >>> 2);
+    }
+
+    exports.dwAsUint8Array = function(v) {
+      return new Uint8Array(v.buffer, v.byteOffset, v.byteLength);
+    }
+
+    exports.dwAsUint16Array = function(v) {
+      return new Uint16Array(v.buffer, v.byteOffset, v.byteLength >>> 1);
+    }
+
+    exports.dwAsUint32Array = function(v) {
+      return new Uint32Array(v.buffer, v.byteOffset, v.byteLength >>> 2);
+    }
+
+    exports.dwAsUint8ClampedArray = function(v) {
+      return new Uint8ClampedArray(v.buffer, v.byteOffset, v.byteLength);
+    }
+
+    exports.dwAsFloat32Array = function(v) {
+      return new Float32Array(v.buffer, v.byteOffset, v.byteLength >>> 2);
+    }
+
+    exports.dwAsFloat64Array = function(v) {
+      return new Float64Array(v.buffer, v.byteOffset, v.byteLength >>> 3);
+    }
+
+
     exports.asArray = function (arrayBuffer)
         {var res = Array.prototype.slice.call(arrayBuffer);
          return res;};

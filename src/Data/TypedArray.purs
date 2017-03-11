@@ -16,9 +16,8 @@
 module Data.TypedArray where
 
 import Prelude
+import Data.ArrayBuffer.Types (ArrayView, DataView, Float32Array, Float64Array, Int16Array, Int32Array, Int8Array, Uint16Array, Uint32Array, Uint8Array, Uint8ClampedArray)
 import Data.Maybe (Maybe(..))
-import Data.ArrayBuffer.Types (ArrayView, Float64Array, Float32Array, Uint32Array, Int32Array, Uint16Array,
-                                Int16Array, Uint8ClampedArray, Uint8Array, Int8Array)
 
 foreign import asInt8Array :: Array Int -> Int8Array
 
@@ -38,6 +37,33 @@ foreign import asFloat32Array :: Array Number -> Float32Array
 
 foreign import asFloat64Array :: Array Number -> Float64Array
 
+
+-- | Create typed int8 array viewing the buffer mapped by the `DataView`
+foreign import dwAsInt8Array :: DataView -> Int8Array
+
+-- | Create typed int16 array viewing the buffer mapped by the `DataView`
+foreign import dwAsInt16Array :: DataView -> Int16Array
+
+-- | Create typed int32 array viewing the buffer mapped by the `DataView`
+foreign import dwAsInt32Array :: DataView -> Int32Array
+
+-- | Create typed uint8 array viewing the buffer mapped by the `DataView`
+foreign import dwAsUint8Array :: DataView -> Uint8Array
+
+-- | Create typed uint16 array viewing the buffer mapped by the `DataView`
+foreign import dwAsUint16Array :: DataView -> Uint16Array
+
+-- | Create typed uint32 array viewing the buffer mapped by the `DataView`
+foreign import dwAsUint32Array :: DataView -> Uint32Array
+
+-- | Create typed uint8 clamped array viewing the buffer mapped by the `DataView`
+foreign import dwAsUint8ClampedArray :: DataView -> Uint8ClampedArray
+
+-- | Create typed float32 array viewing the buffer mapped by the `DataView`
+foreign import dwAsFloat32Array :: DataView -> Float32Array
+
+-- | Create typed float64 array viewing the buffer mapped by the `DataView`
+foreign import dwAsFloat64Array :: DataView -> Float64Array
 
 foreign import newInt8Array :: Int -> Int8Array
 

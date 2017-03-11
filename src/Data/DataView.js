@@ -28,5 +28,5 @@ exports.getFloat32Unsafe = function(v,o,ile) {
 }
 
 exports.getUInt16Unsafe = function(v,o,ile) {
-    return v.getUInt16(o,ile);
+    return v.getUint16(o,ile);
 }

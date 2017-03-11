@@ -41,7 +41,7 @@ getFloat32 :: DataView -> ByteOffset -> Boolean -> Maybe Number
 getFloat32 v o ile |  (o + 1) <= byteLength v = Nothing
                    | otherwise                = Just $ runFn3 getFloat32Unsafe v o ile
 
-getUInt16 :: DataView -> ByteOffset -> Boolean -> Maybe Number
+getUInt16 :: DataView -> ByteOffset -> Boolean -> Maybe Int
 getUInt16 v o ile |  (o + 1) <= byteLength v = Nothing
                   | otherwise              = Just $ runFn3 getUInt16Unsafe v o ile
 
@@ -49,4 +49,4 @@ getUInt16 v o ile |  (o + 1) <= byteLength v = Nothing
 foreign import getFloat32Unsafe :: Fn3 DataView ByteOffset Boolean Number
 
 -- | Fetch float32 value at a certain index in a `DataView`.
-foreign import getUInt16Unsafe :: Fn3 DataView ByteOffset Boolean Number
+foreign import getUInt16Unsafe :: Fn3 DataView ByteOffset Boolean Int

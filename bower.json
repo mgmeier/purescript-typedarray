@@ -25,7 +25,7 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-prelude": "^3.0.0",
+    "purescript-prelude": "^3.1.0",
     "purescript-maybe": "^3.0.0",
     "purescript-arraybuffer-types": "^2.0.0",
     "purescript-functions": "^3.0.0"
